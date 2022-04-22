@@ -5,21 +5,21 @@
 #include <string>
 
 template <typename T>
-   class TPQueue {
-      private: 
-             struct Item {
+class TPQueue {
+         private:
+                 struct Item {
                   T value;
                   Item* next;
-             };
+                 };
                 Item* head = nullptr;
                 TPQueue::Item* create(const T& value);
-      public: 
-         TPQueue();
-         explicit TPQueue(const T& value);
-         void addHead(const T& value);
-         void push(const T& value);
-         T pop();
-   };
+      public:
+            TPQueue();
+            explicit TPQueue(const T& value);
+            void addHead(const T& value);
+            void push(const T& value);
+            T pop();
+};
         template <typename T>
         typename TPQueue <T>::Item* TPQueue<T>::create(const T& value) {
                 Item* item = new Item;
