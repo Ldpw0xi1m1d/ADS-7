@@ -7,15 +7,13 @@
 template <typename T>
       class TPQueue {
  private:
-
     struct Item {
                   T value;
                   Item* next;
-       };
+                };
                 Item* head = nullptr;
                 TPQueue::Item* create(const T& value);
  public:
-
       TPQueue();
                 TPQueue(const T&);
                 void addHead(const T&);
