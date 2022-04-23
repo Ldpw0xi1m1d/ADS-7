@@ -11,9 +11,9 @@ class TPQueue {
                   T value;
                   Item* next;
                  };
-                Item* head = nullptr;
-                TPQueue::Item* create(const T& value);
-      public:
+                   Item* head = nullptr;
+                   TPQueue::Item* create(const T& value);
+         public:
             TPQueue();
             explicit TPQueue(const T& value);
             void addHead(const T& value);
@@ -82,7 +82,8 @@ class TPQueue {
                                 head = first->next;
                                 return temp;
                         }
-} }
+} 
+}
 
 struct SYM {
         char ch;
