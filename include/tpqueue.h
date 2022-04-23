@@ -6,19 +6,21 @@
 
 template <typename T>
 class TPQueue {
-         private: 
-                 struct Item {
-                  T value;
-                  Item* next;
-                 };
-                   Item* head = nullptr;
-                   TPQueue::Item* create(const T& value);
-         public: 
-            TPQueue();
-            explicit TPQueue(const T& value);
-            void addHead(const T& value);
-            void push(const T& value);
-            T pop();
+  private:
+
+           struct Item {
+           T value;
+           Item* next;
+           };
+         Item* head = nullptr;
+         TPQueue::Item* create(const T& value);
+  public:
+
+        TPQueue();
+        explicit TPQueue(const T& value);
+        void addHead(const T& value);
+        void push(const T& value);
+        T pop();
 };
 
 template <typename T>
@@ -89,7 +91,7 @@ template <typename T>
                                 return temp;
                         }
                 }
-        }
+         }
 
 struct SYM {
         char ch;
