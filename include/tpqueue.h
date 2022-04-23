@@ -20,22 +20,26 @@ class TPQueue {
             void push(const T& value);
             T pop();
 };
-        template <typename T>
+
+template <typename T>
         typename TPQueue <T>::Item* TPQueue<T>::create(const T& value) {
                 Item* item = new Item;
                 item->value = value;
                 item->next = nullptr;
                 return item;
         }
-       template <typename T>
+
+template <typename T>
         TPQueue <T>::TPQueue() {
                head = nullptr;
         }
-       template <typename T>
+
+template <typename T>
         TPQueue <T>::TPQueue(const T& value) {
                  head = create(value);
         }
-        template <typename T>
+
+template <typename T>
         void TPQueue<T>::addHead(const T& value) {
                  if (head) {
                       Item* temp = create(value);
@@ -45,7 +49,8 @@ class TPQueue {
                       head = create(value);
                }
         }
-       template <typename T>
+
+template <typename T>
         void TPQueue <T>::push(const T& value) {
                 Item* current = nullptr;
                 if (head == nullptr) {
@@ -71,18 +76,19 @@ class TPQueue {
                         current->next = create(value);
                }
        }
-        template <typename T>
+
+template <typename T>
         T TPQueue <T>::pop() {
                 if (head == nullptr) {
                       throw std::string("Empty!");
-                 } else {
+                } else {
                        Item* first = head;
                        if (first != nullptr) {
                                 T temp = first->value;
                                 head = first->next;
                                 return temp;
                         }
-} 
+                }
 }
 
 struct SYM {
