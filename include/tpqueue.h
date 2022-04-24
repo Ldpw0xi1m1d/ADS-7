@@ -6,14 +6,14 @@
 
 template <typename T>
 class TPQueue {
-    private:
+ private:
       struct Item {
       T value;
       Item* next;
       };
   Item* head = nullptr;
-  TPQueue::Item* create(const T& value);
-    public:
+TPQueue::Item* create(const T& value);
+ public:
        TPQueue();
        explicit TPQueue(const T& value);
        void addHead(const T& value);
@@ -78,19 +78,18 @@ template <typename T>
        }
 
 template <typename T>
-T TPQueue<T>::pop() {
-        if (head == nullptr) {
-              throw std::string("Empty!");
-        } else {
-             Item* first = head;
-               if (first != nullptr) {
-                   T temp = first->value;
-                   head = first->next;
-                   return temp;
-               }
+T TPQueue <T>::pop() {
+    if (head == nullptr) {
+        throw std::string("Empty!");
+    }  else {
+        Item* first = head;
+        if(first != nullptr) {
+            T temp = first->value;
+            head = first->next;
+            return temp;
         }
+    }
 }
-
 struct SYM {
         char ch;
         int prior;
