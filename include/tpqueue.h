@@ -83,7 +83,7 @@ T TPQueue <T>::pop() {
         throw std::string("Empty!");
     }  else {
         Item* first = head;
-        if(first != nullptr) {
+        if (first != nullptr) {
             T temp = first->value;
             head = first->next;
             return temp;
