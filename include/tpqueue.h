@@ -54,10 +54,7 @@ template <typename T>
         void TPQueue <T>::push(const T& value) {
                 Item* current = nullptr;
                 if (head == nullptr) {
-                      Item* item = new Item;
-                      item->value = value;
-                      item->next = nullptr;
-                      head = item;
+                      head = create(value);
                  } else {
                        Item* first = head;
                          while (first != nullptr) {
