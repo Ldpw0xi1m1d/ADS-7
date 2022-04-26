@@ -58,11 +58,7 @@ template <typename T>
                  } else {
                        Item* first = head;
                          while (first != nullptr) {
-                              if (first->value.prior > value.prior) {
-                                       Item* temp = create(value);
-                                       temp->value = first->value;
-                                       temp->next = create(value);
-                                } else if (first->value.prior < value.prior) {
+                              if (first->value.prior < value.prior) {
                                         Item* temp = create(value);
                                         temp->value = first->value;
                                         temp->next = first->next;
