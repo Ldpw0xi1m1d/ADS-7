@@ -55,7 +55,8 @@ template <typename T>
                 if (head == nullptr) {
                       head = create(value);
                  } else {
-                       Item* first = head;
+                       Item* first = nullptr;
+                       first = head;
                        Item* temp = create(value);
                        Item* current = nullptr;
                          while (first != nullptr) {
