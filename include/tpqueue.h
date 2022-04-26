@@ -71,8 +71,8 @@ template <typename T>
                                   }
                                 current = first;
                                 first = first->next;
+                                current->next = temp;
                        }
-                        current->next = temp;
                }
        }
 
