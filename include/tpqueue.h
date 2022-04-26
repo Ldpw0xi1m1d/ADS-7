@@ -52,12 +52,12 @@ template <typename T>
 
 template <typename T>
         void TPQueue <T>::push(const T& value) {
-                Item* current = nullptr;
                 if (head == nullptr) {
                       head = create(value);
                  } else {
                        Item* first = head;
                        Item* temp = create(value);
+                       Item* current = nullptr;
                          while (first != nullptr) {
                           if (first->value.prior > value.prior) {
                                 temp->value = first->value;
@@ -78,14 +78,15 @@ template <typename T>
 
 template <typename T>
 T TPQueue <T>::pop() {
+Item* current = nullptr;
 T temp;
-    if (head == nullptr) {
+current = head;
+    if (current == nullptr) {
         throw std::string("Empty!");
     }  else {
-        Item* first = head;
-        if (first != nullptr) {
-            T temp = first->value;
-            head = first->next;
+        if (current != nullptr) {
+            T temp = current->value;
+            head = current->next;
         }
     }
 return temp;
