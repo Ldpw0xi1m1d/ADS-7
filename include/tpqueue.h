@@ -57,13 +57,12 @@ template <typename T>
                       head = create(value);
                  } else {
                        Item* first = head;
+                       Item* temp = create(value);
                          while (first != nullptr) {
                           if (first->value.prior > value.prior) {
-                                Item* temp = create(value);
                                 temp->value = first->value;
                                 temp->next = create(value);
                           } else if (first->value.prior < value.prior) {
-                                        Item* temp = create(value);
                                         temp->value = first->value;
                                         temp->next = first->next;
                                         first->value = value;
