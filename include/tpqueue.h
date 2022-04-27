@@ -14,9 +14,6 @@ class TPQueue {
   Item* head = nullptr;
 TPQueue::Item* create(const T& value);
  public:
-       TPQueue();
-       explicit TPQueue(const T& value);
-       void addHead(const T& value);
        void push(const T& value);
        T pop();
 };
@@ -27,27 +24,6 @@ template <typename T>
                 item->value = value;
                 item->next = nullptr;
                 return item;
-        }
-
-template <typename T>
-        TPQueue <T>::TPQueue() {
-               head = nullptr;
-        }
-
-template <typename T>
-        TPQueue <T>::TPQueue(const T& value) {
-                 head = create(value);
-        }
-
-template <typename T>
-        void TPQueue<T>::addHead(const T& value) {
-                 if (head) {
-                      Item* temp = create(value);
-                      temp->next = head;
-                      head = temp;
-                  } else {
-                      head = create(value);
-               }
         }
 
 template <typename T>
