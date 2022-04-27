@@ -67,7 +67,7 @@ template <typename T>
 template <typename T>
 T TPQueue <T>::pop() {
 Item* current = nullptr;
-T temp
+T temp;
 current = head;
     if (current != nullptr) {
         temp = current->value;
