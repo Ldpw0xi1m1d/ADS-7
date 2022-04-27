@@ -78,7 +78,6 @@ current = head;
         throw std::string("Empty!");
        }
     }
-}
 struct SYM {
         char ch;
         int prior;
