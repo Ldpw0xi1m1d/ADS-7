@@ -29,14 +29,14 @@ template <typename T>
         }
 
 template <typename T>
-	TPQueue <T>::TPQueue() {
-		   head = nullptr;
-	}
+        TPQueue <T>::TPQueue() {
+                head = nullptr;
+        }
 
-	template <typename T>
-	TPQueue <T>::TPQueue(const T& value) {
-		   head = create(value);
-	}
+        template <typename T>
+        TPQueue <T>::TPQueue(const T& value) {
+                 head = create(value);
+        }
 
 template <typename T>
         void TPQueue <T>::push(const T& value) {
