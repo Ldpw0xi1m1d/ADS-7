@@ -69,17 +69,15 @@ template <typename T>
 template <typename T>
 T TPQueue <T>::pop() {
 Item* current = nullptr;
-T temp;
 current = head;
-    if (current == nullptr) {
-        throw std::string("Empty!");
+    if (current != nullptr) {
+        T temp = current->value;
+        head = current->next;
+        return temp;
     }  else {
-        if (current != nullptr) {
-            T temp = current->value;
-            head = current->next;
-        }
+        throw std::string("Empty!");
+       }
     }
-return temp;
 }
 struct SYM {
         char ch;
